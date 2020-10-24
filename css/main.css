@@ -87,47 +87,118 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/*
+/* -------------------------------------------------------------------------- */
+/* vv Imported Typefaces vv */
 
-As currently written, the two fonts listed below are not
-showing up on the test structured in the html file.
-
-What can I do to troubleshoot this?
-
-The only potential problem I can think of is that I
-might have to use an href to the fonts folder to replace
-the url system that fontsquirrel defaulted to.
-
-*/
-
-   @font-face {
+  /* Osgard */
+  @font-face {
        font-family: 'osgardregular';
-       src: url('anthony_james_-_osgard-webfont.woff2') format('woff2'),
-            url('anthony_james_-_osgard-webfont.woff') format('woff');
+       src: url('anthony_james_-_osgard-webfont.woff2') format('woff2');
+       src: url('anthony_james_-_osgard-webfont.woff') format('woff');
        font-weight: normal;
        font-style: normal;
+       /* REFERENCE: font-family: osgard; */
    }
 
-   @font-face {
+  /* Eccentric */
+  @font-face {
        font-family: 'eccentricregular';
        src: url('eccentric-webfont.woff2') format('woff2'),
             url('eccentric-webfont.woff') format('woff');
        font-weight: normal;
        font-style: normal;
+       /* REFERENCE: font-family: eccentric; */
    }
 
-   .osgardtest{
-     font-family: osgardregular;
-     font-size: 100px;
-   }
+  /* Roboto */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+  /* REFERENCE: font-family: 'Roboto', sans-serif; */
 
-   .eccentrictest{
-     font-family: eccentricregular;
-     font-size: 100px;
-   }
+  /* Courier */
+  @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+  /* REFERENCE: font-family: 'Courier Prime', monospace; */
 
+/* -------------------------------------------------------------------------- */
 
+/* -------------------------------------------------------------------------- */
 
+/* vv Classes vv */
+
+body{
+  background-color: #ee7642;
+  margin: 0;
+  padding: 0;
+}
+
+.homepage img{
+  margin: 0;
+  position: absolute;
+}
+
+.bulletin{
+  position: relative;
+  padding: 150px 0px 0px 100px;
+  padding-bottom: 0;
+}
+
+.bulletin h1{
+  font-family: osgard;
+  font-weight: normal;
+  font-size: 250px;
+  line-height: 250px;
+  color: #fdaf3d;
+  margin: 0;
+}
+
+.bulletin p{
+  font-family: 'Courier Prime', monospace;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 35px;
+  color: #ffffff;
+  margin-left: 100px;
+  margin-top: 0;
+}
+
+nav{
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  background-color: #ee7642;
+  margin: 100px 0px 0px 0px;
+  padding: 10px;
+  position: sticky;
+  text-align: center;
+  padding: 0;
+}
+
+nav ul{
+  white-space: nowrap;
+  max-width: 1500px;
+  margin: 0;
+  padding: 0;
+
+}
+
+nav ul li{
+  width: 18%;
+  display: inline-block;
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+nav ul li.navbadge{
+  font-family: eccentric;
+  font-weight: normal;
+  font-size: 55px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* -------------------------------------------------------------------------- */
 
 
 /* ==========================================================================
