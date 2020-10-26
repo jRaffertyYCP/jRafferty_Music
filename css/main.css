@@ -87,118 +87,102 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/* -------------------------------------------------------------------------- */
-/* vv Imported Typefaces vv */
-
-  /* Osgard */
-  @font-face {
-       font-family: 'osgardregular';
-       src: url('anthony_james_-_osgard-webfont.woff2') format('woff2');
-       src: url('anthony_james_-_osgard-webfont.woff') format('woff');
-       font-weight: normal;
-       font-style: normal;
-       /* REFERENCE: font-family: osgard; */
-   }
-
-  /* Eccentric */
-  @font-face {
-       font-family: 'eccentricregular';
-       src: url('eccentric-webfont.woff2') format('woff2'),
-            url('eccentric-webfont.woff') format('woff');
-       font-weight: normal;
-       font-style: normal;
-       /* REFERENCE: font-family: eccentric; */
-   }
-
-  /* Roboto */
-  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-  /* REFERENCE: font-family: 'Roboto', sans-serif; */
-
-  /* Courier */
-  @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
-  /* REFERENCE: font-family: 'Courier Prime', monospace; */
-
-/* -------------------------------------------------------------------------- */
-
-/* -------------------------------------------------------------------------- */
-
-/* vv Classes vv */
-
+/* hides horizontal scrolling on the entire document */
 body{
-  background-color: #ee7642;
-  margin: 0;
-  padding: 0;
+  overflow-x: hidden;
+  display: flex;
 }
 
-.homepage img{
-  margin: 0;
-  position: absolute;
+.home_order{
+  flex-direction: column-reverse;
+  height: 100vh;
 }
 
-.bulletin{
-  position: relative;
-  padding: 150px 0px 0px 100px;
-  padding-bottom: 0;
-}
+/* to include the fonts in the file...sure the url source has the correct path...so I added the ../fonts/ for the CSS to go up and go into the fonts folder.*/
 
-.bulletin h1{
-  font-family: osgard;
+@font-face {
+  font-family: 'osgardregular';
+  src: url('../fonts/anthony_james_-_osgard-webfont.woff2') format('woff2'),
+       url('../fonts/anthony_james_-_osgard-webfont.woff') format('woff');
   font-weight: normal;
-  font-size: 250px;
-  line-height: 250px;
-  color: #fdaf3d;
-  margin: 0;
+  font-style: normal;
+
 }
 
-.bulletin p{
-  font-family: 'Courier Prime', monospace;
+@font-face {
+  font-family: 'eccentricregular';
+  src: url('../fonts/eccentric-webfont.woff2') format('woff2'),
+       url('../fonts/eccentric-webfont.woff') format('woff');
   font-weight: normal;
-  font-size: 18px;
-  line-height: 35px;
-  color: #ffffff;
-  margin-left: 100px;
-  margin-top: 0;
+  font-style: normal;
 }
 
+/* Basic setup for the nav bar */
 nav{
-  font-family: 'Roboto', sans-serif;
-  font-weight: normal;
-  font-size: 30px;
-  background-color: #ee7642;
-  margin: 100px 0px 0px 0px;
-  padding: 10px;
-  position: sticky;
-  text-align: center;
-  padding: 0;
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0px;
+  background-color: #EE7642;
 }
 
 nav ul{
-  white-space: nowrap;
-  max-width: 1500px;
-  margin: 0;
-  padding: 0;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  list-style-type: none;
 }
 
 nav ul li{
-  width: 18%;
-  display: inline-block;
-  font-size: 24px;
-  vertical-align: middle;
-}
-
-nav ul li.navbadge{
-  font-family: eccentric;
-  font-weight: normal;
-  font-size: 55px;
+  margin: 0px 5% 0px 5%;
 }
 
 nav ul li a{
+  color: #fff;
+  font-size: 26px;
   text-decoration: none;
-  color: #ffffff;
 }
 
-/* -------------------------------------------------------------------------- */
+/* Basic setup of hero section on home page */
+.home_hero{
+  width: 100vw;
+  /* change background color for background-image */
+  background-color: #000;
+  height: 100vh;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Aligns the h1 and p....you can continue to position items as you see fit */
+.left_align{
+  justify-content: left;
+}
+
+/* Targets the h1 in the home_hero class...you'll need to adjust stuff to meet your mockup */
+.home_hero h1{
+  font-family: 'osgardregular';
+  font-size: 100px;
+  color: #FBB44E;
+  margin: 0px;
+}
+
+/* targets the p tag in the home.hero class...you'll need to adjust stuff to meet your mockup */
+.home_hero p{
+  font-size: 20px;
+  color: #fff;
+  font-family: 'eccentricregular';
+}
+
+
+
+
 
 
 /* ==========================================================================
