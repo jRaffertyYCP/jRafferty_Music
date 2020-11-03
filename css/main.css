@@ -87,6 +87,57 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* hides horizontal scrolling on the entire document */
+
+
+/* -------------------------------------------------------------------------- */
+/* vv Imported Typefaces vv */
+
+  /* Osgard */
+  @font-face {
+       font-family: 'osgardregular';
+       src: url('anthony_james_-_osgard-webfont.woff2') format('woff2');
+       src: url('anthony_james_-_osgard-webfont.woff') format('woff');
+       font-weight: normal;
+       font-style: normal;
+       /* REFERENCE:
+       font-family: osgard;
+       font-weight: normal;
+       */
+   }
+
+  /* Eccentric */
+  @font-face {
+       font-family: 'eccentricregular';
+       src: url('eccentric-webfont.woff2') format('woff2'),
+            url('eccentric-webfont.woff') format('woff');
+       font-weight: normal;
+       font-style: normal;
+       /* REFERENCE:
+       font-family: eccentric;
+       font-weight: normal;
+       */
+   }
+
+  /* Roboto */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+  /* REFERENCE:
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  */
+
+  /* Courier */
+  @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+  /* REFERENCE:
+  font-family: 'Courier Prime', monospace;
+  font-weight: normal;
+  */
+
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/* vv Classes vv */
+
 body{
   overflow-x: hidden;
   display: flex;
@@ -97,27 +148,13 @@ body{
   height: 100vh;
 }
 
-@font-face {
-  font-family: 'osgardregular';
-  src: url('../fonts/anthony_james_-_osgard-webfont.woff2') format('woff2'),
-       url('../fonts/anthony_james_-_osgard-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'eccentricregular';
-  src: url('../fonts/eccentric-webfont.woff2') format('woff2'),
-       url('../fonts/eccentric-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Navbar */
 nav{
   width: 100vw;
   height: 100px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,20 +172,26 @@ nav ul{
 }
 
 nav ul li{
-  margin: 0px 5% 0px 5%;
+  margin: 0px 10% 0px 10%;
 }
 
 nav ul li a{
-  color: #fff;
   font-size: 26px;
+  color: #ffffff;
   text-decoration: none;
 }
 
-/* Basic setup of hero section on home page */
+nav ul li a span{
+  font-family: eccentric;
+  font-weight: normal;
+  font-size: 55px;
+  display: inline-block;
+  width: max-content;
+}
+
 .home_hero{
+  background-image: url('../img/albumart_desktop.jpg');
   width: 100vw;
-  /* change background color for background-image */
-  background-color: #000;
   height: 100vh;
   margin: 0px;
   display: flex;
@@ -157,37 +200,38 @@ nav ul li a{
   flex-direction: column;
 }
 
-/* Aligns the h1 and p....you can continue to position items as you see fit */
 .left_align{
   justify-content: left;
 }
 
-/* Targets the h1 in the home_hero class...you'll need to adjust stuff to meet your mockup */
 .home_hero h1{
-  font-family: 'osgardregular';
-  font-size: 100px;
+  font-family: osgard;
+  font-weight: normal;
+  font-size: 250px;
+  line-height: 225px;
   color: #FBB44E;
   margin: 0px;
 }
 
-/* targets the p tag in the home.hero class...you'll need to adjust stuff to meet your mockup */
 .home_hero p{
-  font-size: 20px;
-  color: #fff;
-  font-family: 'eccentricregular';
+  font-family: 'Courier Prime', monospace;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 35px;
+  color: #ffffff;
+  margin-left: 100px;
+  margin-top: 15px;
 }
 
-/* Diamonds in the hero section */
-
-.diamonds {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  margin: 0px;
-  position: relative;
-  top: 100px;
-  left: 35%;
+.diamonds{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0px;
+    position: relative;
+    top: 54px;
+    /* left: 34%; */
 }
 
 .diamonds ul{
@@ -200,69 +244,37 @@ nav ul li a{
 }
 
 .diamonds ul li{
-  margin: 0px 10px 0px 10px;
+  margin: 0px 20px 0px 20px;
 }
+
 .rotateme{
   width: 10px;
   height: 10px;
   background-color: #EE7642;
   transform: rotate(45deg);
 }
-#specialrotateme{
-  width: 12px;
-  height: 12px;
-  background-color: #FBB44E;
+
+#rotateme_HL{
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
 }
 
-/* About Page Content */
-
-.about_content{
+.aboutpage{
+  background-image: url('../img/albumart_desktop.jpg');
   width: 100vw;
+  height: 100vh;
   margin: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url('../img/');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 575px;
 }
 
-
-/* Shop Page Content */
-
-.shop_content{
-  width: 100vw;
-  margin: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #EE7642;
+.about_hero{
+  max-width: 100vw;
+  margin: 0px 10px 10px 0px;
 }
-
-
-/* Tour Page Content */
-
-.tour_content{
-  width: 100vw;
-  margin: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-image: url('../img/');
-  background-position: bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-
-
-
-
 
 /* ==========================================================================
    Helper classes
