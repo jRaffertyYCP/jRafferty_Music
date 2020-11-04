@@ -96,42 +96,28 @@ textarea {
   /* Osgard */
   @font-face {
        font-family: 'osgardregular';
-       src: url('anthony_james_-_osgard-webfont.woff2') format('woff2');
-       src: url('anthony_james_-_osgard-webfont.woff') format('woff');
+       src: url('../fonts/anthony_james_-_osgard-webfont.woff2') format('woff2');
+       src: url('../fonts/anthony_james_-_osgard-webfont.woff') format('woff');
        font-weight: normal;
        font-style: normal;
-       /* REFERENCE:
-       font-family: osgard;
-       font-weight: normal;
-       */
    }
 
   /* Eccentric */
   @font-face {
        font-family: 'eccentricregular';
-       src: url('eccentric-webfont.woff2') format('woff2'),
-            url('eccentric-webfont.woff') format('woff');
+       src: url('../fonts/eccentric-webfont.woff2') format('woff2'),
+            url('../fonts/eccentric-webfont.woff') format('woff');
        font-weight: normal;
        font-style: normal;
-       /* REFERENCE:
-       font-family: eccentric;
-       font-weight: normal;
-       */
    }
 
   /* Roboto */
   @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-  /* REFERENCE:
-  font-family: 'Roboto', sans-serif;
-  font-weight: normal;
-  */
+
 
   /* Courier */
   @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
-  /* REFERENCE:
-  font-family: 'Courier Prime', monospace;
-  font-weight: normal;
-  */
+
 
 /* -------------------------------------------------------------------------- */
 
@@ -143,8 +129,14 @@ body{
   display: flex;
 }
 
+
 .home_order{
   flex-direction: column-reverse;
+  height: 100vh;
+}
+
+.childpage_order{
+  flex-direction: column;
   height: 100vh;
 }
 
@@ -163,12 +155,14 @@ nav{
   background-color: #EE7642;
 }
 
+/* added in margin: 0px; so that on the index.html the whole screen is fixed to full height */
 nav ul{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   list-style-type: none;
+  margin: 0px;
 }
 
 nav ul li{
@@ -181,13 +175,31 @@ nav ul li a{
   text-decoration: none;
 }
 
+
+/* Hover states for nav bar */
+nav ul li a:hover {
+  background-color: #FBB44E;
+  color: #000;
+  padding: 50px 75px 28px 75px;
+  margin: -50px -75px -28px -75px;
+}
+
 nav ul li a span{
-  font-family: eccentric;
+  font-family: 'eccentricregular';
   font-weight: normal;
   font-size: 55px;
   display: inline-block;
   width: max-content;
 }
+
+/* Hover state for Gavin link */
+a#gavinlink:hover {
+  background-color: #FBB44E;
+  color: #000;
+  padding: 50px 75px 20px 75px;
+  margin: -50px -75px -20px -75px;
+}
+
 
 .home_hero{
   background-image: url('../img/albumart_desktop.jpg');
@@ -200,12 +212,24 @@ nav ul li a span{
   flex-direction: column;
 }
 
+.child_hero{
+  background-image: url('../img/albumart_desktop.jpg');
+  width: 100vw;
+  height: 90%;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .left_align{
   justify-content: left;
 }
 
-.home_hero h1{
-  font-family: osgard;
+.home_hero h1,
+.child_hero h1{
+  font-family: 'osgardregular';
   font-weight: normal;
   font-size: 250px;
   line-height: 225px;
@@ -213,7 +237,8 @@ nav ul li a span{
   margin: 0px;
 }
 
-.home_hero p{
+.home_hero p,
+.child_hero p{
   font-family: 'Courier Prime', monospace;
   font-weight: normal;
   font-size: 18px;
@@ -230,8 +255,7 @@ nav ul li a span{
     flex-direction: row;
     margin: 0px;
     position: relative;
-    top: 54px;
-    /* left: 34%; */
+    top: 5%;
 }
 
 .diamonds ul{
@@ -260,10 +284,13 @@ nav ul li a span{
   background-color: #ffffff;
 }
 
+/* Sets up the about page section....you'll want to copy/paste and rename/style a bit for the tour page as well */
 .aboutpage{
   background-image: url('../img/albumart_desktop.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100vw;
-  height: 100vh;
   margin: 0px;
   display: flex;
   justify-content: center;
@@ -271,10 +298,17 @@ nav ul li a span{
   flex-direction: column;
 }
 
+/* Sets the band group photo as a background image */
 .about_hero{
-  max-width: 100vw;
-  margin: 0px 10px 10px 0px;
+  background-image: url('../img/groupphoto.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 700px;
+  margin: 5% 0% 5% 0%;
 }
+
 
 /* ==========================================================================
    Helper classes

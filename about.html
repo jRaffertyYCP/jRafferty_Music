@@ -14,20 +14,11 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="home_order">
+<body>
 
-
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="index.html"><span>Dance Gavin Dance</span></a></li>
-    <li><a href="shop.html">Shop</a></li>
-    <li><a href="tour.html">Tour</a></li>
-  </ul>
-</nav>
-
-<section class="home_hero">
+  <!-- made some new styles...cloned from home and made into childpage. Childpage order reorders the content and child hero will style the hero section for the hero section. -->
+<div class="childpage_order">
+<section class="child_hero">
   <div class="left_align">
   <h1>Afterburner
     <br/>
@@ -55,11 +46,22 @@
 
 </section>
 
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="index.html" id="gavinlink"><span>Dance Gavin Dance</span></a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="tour.html">Tour</a></li>
+  </ul>
+</nav>
+
+<!-- This the above changes and childpage_order wrapping everything to reorder everything, the about page now has the background image working. Instead of putting in the img tag for the about hero...I styled it to be the background image. Then after the about_hero div,  you can add your content below. -->
 <section class="aboutpage">
   <div class="about_hero">
-    <img src="img/groupphoto.jpg" alt="">
   </div>
 </section>
+</div>
 
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
