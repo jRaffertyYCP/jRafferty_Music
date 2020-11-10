@@ -153,7 +153,7 @@ nav{
   flex-direction: row;
   margin: 0px;
   background-color: #EE7642;
-  /* position: sticky; */
+  position: sticky;
 }
 
 /* added in margin: 0px; so that on the index.html the whole screen is fixed to full height */
@@ -181,8 +181,8 @@ nav ul li a{
 nav ul li a:hover {
   background-color: #FBB44E;
   color: #000;
-  padding: 50px 75px 34px 75px;
-  margin: -50px -75px -34px -75px;
+  padding: 80px 75px 80px 75px;
+  margin: -80px -75px -80px -75px;
 }
 
 nav ul li a span{
@@ -197,8 +197,8 @@ nav ul li a span{
 a#gavinlink:hover {
   background-color: #FBB44E;
   color: #000;
-  padding: 60px 65px 27px 65px;
-  margin: -60px -65px -27px -65px;
+  padding: 90px 65px 73px 65px;
+  margin: -90px -65px -73px -65px;
 }
 
 
@@ -250,13 +250,13 @@ a#gavinlink:hover {
 }
 
 .diamonds{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin: 0px;
-    position: relative;
-    top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0px;
+  position: relative;
+  top: 5%;
 }
 
 .diamonds ul{
@@ -333,9 +333,88 @@ a#gavinlink:hover {
   left: 1%;
 }
 
+.tourpage{
+  background-color: #FBB44E;
+  width: 100vw;
+  height: 5000px;
+  position: absolute;
+}
 
+.tourflames{
+  background-image: url('../svg/dgd_tourflames.svg');
+  margin: 0;
+}
 
+.tour_hero h3{
+  font-family: 'osgardregular';
+  font-weight: normal;
+  font-size: 144px;
+  line-height: 144px;
+  color: #36333e;
+  margin: 0;
+  padding: 92px 0px 125px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.tourdate{
+  display: flex;
+  position: relative;
+  width: 100vw;
+  justify-content: center;
+}
+
+.tourdate_box{
+  width: 268px;
+  height: 268px;
+  border: 16px solid #36333e;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 71px 0;
+  font-family: 'eccentricregular';
+  font-size: 72px;
+  color: #36333e;
+  text-align: center;
+}
+
+.tourdate_box span{
+  font-family: 'osgardregular';
+  font-size: 200px;
+  line-height: 175px;
+  color: #36333e;
+  text-align: center;
+}
+
+.tourdate_location{
+  width: 840px;
+  height: 250px;
+  background-color: #36333e;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 25px 30px 25px 30px;
+  font-family: 'osgardregular';
+  font-size: 72px;
+  color: #fbb44e;
+  text-align: center;
+}
+
+.tourdate_location span{
+  font-family: 'eccentricregular';
+  font-size: 130px;
+  line-height: 150px;
+  color: #ee7642;
+  text-align: center;
+}
+
+.tourdate_location span#OCT13{
+  letter-spacing: -0.01em
+}
+
+.tourdate#laststop{
+  padding: 0 0 190px 0;
+}
 
 /* ==========================================================================
    Helper classes
