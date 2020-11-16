@@ -201,6 +201,23 @@ a#gavinlink:hover {
   margin: -90px -65px -73px -65px;
 }
 
+/* Sticky Nav */
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
 
 .home_hero{
   background-image: url('../img/albumart_desktop.jpg');
@@ -337,12 +354,20 @@ a#gavinlink:hover {
   background-color: #FBB44E;
   width: 100vw;
   height: 5000px;
-  position: absolute;
 }
 
 .tourflames{
   background-image: url('../svg/dgd_tourflames.svg');
   margin: 0;
+  background-size: cover;
+  width: 100vw;
+  margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.tour_hero{
+  width: 100%;
+  margin: 0 auto;
 }
 
 .tour_hero h3{
@@ -414,6 +439,45 @@ a#gavinlink:hover {
 
 .tourdate#laststop{
   padding: 0 0 190px 0;
+}
+
+/* Mobile Styles */
+
+@media screen and (max-width: 768px){
+
+  /* Home Page */
+
+  .home_hero h1, .child_hero h1 {
+    font-weight: normal;
+    font-size: 138px;
+    line-height: 145px;
+    margin: 0px;
+}
+
+.home_hero p, .child_hero p {
+  margin: 0 auto;
+}
+nav{
+  position: absolute;
+  top: 0px;
+}
+
+nav ul {
+  width: 16%;
+  margin: 0 auto;
+  position: relative;
+  right: 15px;
+}
+
+
+}
+
+
+
+
+@media screen and (max-width: 320px){
+
+
 }
 
 /* ==========================================================================
