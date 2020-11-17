@@ -441,6 +441,24 @@ a#gavinlink:hover {
   padding: 0 0 190px 0;
 }
 
+.shoppage{
+  background-color: #ee7642;
+  width: 100vw;
+  height: 3000px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.shop_item{
+  margin: 45px;
+  background-color: #ffffff;
+  width: 394px;
+  height: 394px;
+}
+
 /* Mobile Styles */
 
 @media screen and (max-width: 768px){
