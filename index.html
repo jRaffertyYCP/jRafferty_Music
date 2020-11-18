@@ -9,6 +9,7 @@
 
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
@@ -28,6 +29,7 @@
 </nav>
 
 <section class="home_hero">
+  <div id="a">
   <div class="left_align">
   <h1>Afterburner
     <br/>
@@ -52,12 +54,137 @@
        <li><div class="rotateme"></div></li>
      </ul>
    </div>
+  </div>
+
+  <div id="b">
+    <div class="left_align">
+    <h1>Holy Moley
+      <br/>
+      Now on Vinyl
+    </h1>
+  
+    <p>
+      Our new and improved merch store has a
+        limited edition release of the<br>Afterburner
+        album on vinyl. Once they’re out of stock,
+        you may never get a<br>chance to buy one again,
+        so pick one up while there’s still time!
+    </p>
+    </div>
+  
+    <div class="diamonds">
+       <ul>
+         <li><div class="rotateme"></div></li>
+         <li><div class="rotateme" id="rotateme_HL"></div></li>
+         <li><div class="rotateme"></div></li>
+         <li><div class="rotateme"></div></li>
+         <li><div class="rotateme"></div></li>
+       </ul>
+     </div>
+    </div>
+
+    <div id="c">
+      <div class="left_align">
+      <h1>KFC
+        <br/>
+        Now on Vinyl
+      </h1>
+    
+      <p>
+        Our new and improved merch store has a
+          limited edition release of the<br>Afterburner
+          album on vinyl. Once they’re out of stock,
+          you may never get a<br>chance to buy one again,
+          so pick one up while there’s still time!
+      </p>
+      </div>
+    
+      <div class="diamonds">
+         <ul>
+           <li><div class="rotateme"></div></li>
+           <li><div class="rotateme"></div></li>
+           <li><div class="rotateme" id="rotateme_HL"></div></li>
+           <li><div class="rotateme"></div></li>
+           <li><div class="rotateme"></div></li>
+         </ul>
+       </div>
+      </div>
+
+      <div id="d">
+        <div class="left_align">
+        <h1>Count Chocula
+          <br/>
+          Now on Vinyl
+        </h1>
+      
+        <p>
+          Our new and improved merch store has a
+            limited edition release of the<br>Afterburner
+            album on vinyl. Once they’re out of stock,
+            you may never get a<br>chance to buy one again,
+            so pick one up while there’s still time!
+        </p>
+        </div>
+      
+        <div class="diamonds">
+           <ul>
+             <li><div class="rotateme"></div></li>
+             <li><div class="rotateme"></div></li>
+             <li><div class="rotateme"></div></li>
+             <li><div class="rotateme" id="rotateme_HL"></div></li>
+             <li><div class="rotateme"></div></li>
+           </ul>
+         </div>
+        </div>
+
+        <div id="e">
+          <div class="left_align">
+          <h1>Silly Rabbit
+            <br/>
+            Now on Vinyl
+          </h1>
+        
+          <p>
+            Our new and improved merch store has a
+              limited edition release of the<br>Afterburner
+              album on vinyl. Once they’re out of stock,
+              you may never get a<br>chance to buy one again,
+              so pick one up while there’s still time!
+          </p>
+          </div>
+        
+          <div class="diamonds">
+             <ul>
+               <li><div class="rotateme"></div></li>
+               <li><div class="rotateme"></div></li>
+               <li><div class="rotateme"></div></li>
+               <li><div class="rotateme"></div></li>
+               <li><div class="rotateme" id="rotateme_HL"></div></li>
+             </ul>
+           </div>
+          </div>
 
 </section>
 
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/main.js"></script>
+  <script>
+  var currentDiv = $("#a");
+var nextDiv, count = 1;
+var myInterval = setInterval(function() {
+  if (count == 5) {
+    currentDiv.hide();
+    currentDiv = $("#a");
+    currentDiv.show();
+    count = 1;
+  } else {
+    count++;
+    currentDiv.hide();
+    currentDiv = currentDiv.next();
+    currentDiv.show();
+  }
+}, 2000);
+  </script>
 
 </body>
 

@@ -302,6 +302,15 @@ a#gavinlink:hover {
   background-color: #ffffff;
 }
 
+/* Timed Content */
+
+#b,
+#c,
+#d,
+#e{
+  display: none;
+}
+
 /* Sets up the about page section....you'll want to copy/paste and rename/style a bit for the tour page as well */
 .aboutpage{
   background-image: url('../img/albumart_desktop.jpg');

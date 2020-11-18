@@ -12,3 +12,6 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+// Timed Content on a page //
+
