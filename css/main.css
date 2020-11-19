@@ -176,15 +176,6 @@ nav ul li a{
   text-decoration: none;
 }
 
-
-/* Hover states for nav bar */
-nav ul li a:hover {
-  background-color: #FBB44E;
-  color: #000;
-  padding: 80px 75px 80px 75px;
-  margin: -80px -75px -80px -75px;
-}
-
 nav ul li a span{
   font-family: 'eccentricregular';
   font-weight: normal;
@@ -193,12 +184,33 @@ nav ul li a span{
   width: max-content;
 }
 
-/* Hover state for Gavin link */
+nav ul li a:hover {
+  background-color: #FBB44E;
+  color: #000;
+  padding: 40px 75px 40px 75px;
+  margin: -40px -75px -40px -75px;
+  transition: ease-out 0.1s;
+}
+
 a#gavinlink:hover {
   background-color: #FBB44E;
   color: #000;
-  padding: 90px 65px 73px 65px;
-  margin: -90px -65px -73px -65px;
+  padding: 51px 65px 35px 65px;
+  margin: -51px -65px -35px -65px;
+}
+
+nav.index_nav ul li a:hover {
+  background-color: #FBB44E;
+  color: #000;
+  padding: 40px 75px 28px 75px;
+  margin: -40px -75px -28px -75px;
+}
+
+.index_nav a#gavinlink:hover {
+  background-color: #FBB44E;
+  color: #000;
+  padding: 51px 65px 21px 65px;
+  margin: -51px -65px -21px -65px;
 }
 
 /* Sticky Nav */
@@ -249,8 +261,8 @@ a#gavinlink:hover {
 .child_hero h1{
   font-family: 'osgardregular';
   font-weight: normal;
-  font-size: 250px;
-  line-height: 225px;
+  font-size: 240px;
+  line-height: 250px;
   color: #FBB44E;
   margin: 0px;
 }
@@ -281,7 +293,7 @@ a#gavinlink:hover {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  margin: 0px;
+  margin: -15px 0 0 0;
   list-style-type: none;
 }
 
@@ -363,13 +375,16 @@ a#gavinlink:hover {
   background-color: #FBB44E;
   width: 100vw;
   height: 5000px;
+  padding: 0;
 }
 
 .tourflames{
   background-image: url('../svg/dgd_tourflames.svg');
   margin: 0;
+  padding: 0;
   background-size: cover;
   width: 100vw;
+  background-repeat: no-repeat;
   margin: 0 auto;
   background-position: center;
   background-repeat: no-repeat;

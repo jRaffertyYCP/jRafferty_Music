@@ -9,6 +9,8 @@
 
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
@@ -17,23 +19,25 @@
 <body>
 
 <div class="childpage_order">
+
 <section class="child_hero">
+
+  <div id="a">
   <div class="left_align">
-  <h1>Afterburner
+  <h1 class="animate__animated animate__fadeInRight animate__slow">
+    Afterburner
     <br/>
     Now on Vinyl
   </h1>
 
-  <p>
-    Our new and improved merch store has a
-      limited edition release of the<br>Afterburner
-      album on vinyl. Once they’re out of stock,
-      you may never get a<br>chance to buy one again,
-      so pick one up while there’s still time!
+  <p class="animate__animated animate__fadeIn animate__slow">
+    Our new and improved merch store has a limited edition release of the<br>
+    Afterburner album on vinyl. Once they’re out of stock,you may never get a<br>
+    chance to buy one again, so pick one up while there’s still time!
   </p>
   </div>
 
-  <div class="diamonds">
+    <div class="diamonds">
      <ul>
        <li><div class="rotateme" id="rotateme_HL"></div></li>
        <li><div class="rotateme"></div></li>
@@ -42,6 +46,113 @@
        <li><div class="rotateme"></div></li>
      </ul>
    </div>
+  </div>
+
+  <div id="b">
+    <div class="left_align">
+    <h1 class="animate__animated animate__fadeInRight animate__slow">
+      Swanfest 2021
+      <br/>
+      Back in Action
+    </h1>
+
+    <p class="animate__animated animate__fadeIn animate__slow">
+      Swanfest at Papa Murphy's Park at Cal Expo initially scheduled
+      for April 25,<br>2020 has been rescheduled to April 24, 2021. There
+      is nothing you need to do<br>as your tickets will be valid for the new date.
+    </p>
+    </div>
+
+    <div class="diamonds">
+       <ul>
+         <li><div class="rotateme"></div></li>
+         <li><div class="rotateme" id="rotateme_HL"></div></li>
+         <li><div class="rotateme"></div></li>
+         <li><div class="rotateme"></div></li>
+         <li><div class="rotateme"></div></li>
+       </ul>
+     </div>
+    </div>
+
+    <div id="c">
+      <div class="left_align">
+      <h1 class="animate__animated animate__fadeInRight animate__slow">
+        Riding a Rhino
+        <br/>
+        Pico De Gallo
+      </h1>
+
+      <p class="animate__animated animate__fadeIn animate__slow">
+        Ever since “Chucky Vs. The Giant Tortoise,” one ore two fans have been
+        dreaming<br>of having a DGD-branded salsa based on one of Jon Mess’ most
+        iconic lyrics.<br> Now they can finally find Riding A Rhino Pico De Gallo
+        at most major grocers
+      </p>
+      </div>
+
+      <div class="diamonds">
+         <ul>
+           <li><div class="rotateme"></div></li>
+           <li><div class="rotateme"></div></li>
+           <li><div class="rotateme" id="rotateme_HL"></div></li>
+           <li><div class="rotateme"></div></li>
+           <li><div class="rotateme"></div></li>
+         </ul>
+       </div>
+      </div>
+
+      <div id="d">
+        <div class="left_align">
+        <h1 class="animate__animated animate__fadeInRight animate__slow">
+          Merch Sale
+          <br/>
+          70% Off
+        </h1>
+
+        <p class="animate__animated animate__fadeIn animate__slow">
+          To celebrate the Holidays, we're offering a 70% discount on everything
+          in our<br>merch store until January 30th, 2021. Time is ticking, so don't
+          wait too long<br>or you'll miss your chance!
+        </p>
+        </div>
+
+        <div class="diamonds">
+           <ul>
+             <li><div class="rotateme"></div></li>
+             <li><div class="rotateme"></div></li>
+             <li><div class="rotateme"></div></li>
+             <li><div class="rotateme" id="rotateme_HL"></div></li>
+             <li><div class="rotateme"></div></li>
+           </ul>
+         </div>
+        </div>
+
+        <div id="e">
+          <div class="left_align">
+          <h1 class="animate__animated animate__fadeInRight animate__slow">
+            New Decade
+            <br/>
+            New Website
+          </h1>
+
+          <p class="animate__animated animate__fadeIn animate__slow">
+            Welcome to the new online home of Dance Gavin Dance! This website is
+            actually<br>just a project for an introductory web design course and
+            is strictly for<br>educational purposes, unless DGD is interested in
+            hiring a new web designer ;)
+          </p>
+          </div>
+
+          <div class="diamonds">
+             <ul>
+               <li><div class="rotateme"></div></li>
+               <li><div class="rotateme"></div></li>
+               <li><div class="rotateme"></div></li>
+               <li><div class="rotateme"></div></li>
+               <li><div class="rotateme" id="rotateme_HL"></div></li>
+             </ul>
+          </div>
+        </div>
 
 </section>
 
@@ -114,6 +225,24 @@
 </section>
 
 
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script>
+var currentDiv = $("#a");
+var nextDiv, count = 1;
+var myInterval = setInterval(function() {
+if (count == 5) {
+  currentDiv.hide();
+  currentDiv = $("#a");
+  currentDiv.show();
+  count = 1;
+} else {
+  count++;
+  currentDiv.hide();
+  currentDiv = currentDiv.next();
+  currentDiv.show();
+}
+}, 15500);
+</script>
 
 </div>
 
