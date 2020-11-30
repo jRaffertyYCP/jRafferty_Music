@@ -199,6 +199,10 @@ a#gavinlink:hover {
   margin: -51px -65px -35px -65px;
 }
 
+#gavinmobile{
+  display: none;
+}
+
 nav.index_nav ul li a:hover {
   background-color: #FBB44E;
   color: #000;
@@ -483,6 +487,55 @@ nav.index_nav ul li a:hover {
   height: 394px;
 }
 
+/* Off Canvas Navigation */
+
+.hamburger{
+  font-size:30px;
+  cursor:pointer;
+  color: #fff;
+  position: relative;
+  display: none;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
 /* Mobile Styles */
 
 @media screen and (max-width: 768px){
@@ -505,10 +558,63 @@ nav{
 }
 
 nav ul {
-  width: 16%;
+  width: 20%;
   margin: 0 auto;
   position: relative;
   right: 15px;
+}
+
+#aboutpagehideme{
+  display: none;
+}
+
+.aboutpage{
+  padding: 0px;
+}
+
+.about_hero{
+  height: 495px;
+}
+
+.aboutpage h4{
+  right: 30%;
+}
+
+.aboutpage p{
+  width: 700px;
+}
+
+.content{
+  height: 100vh;
+}
+
+.left_align{
+  margin: 3%;
+}
+
+.left_align br{
+  display: none;
+}
+
+.tour_hero h3 {
+  font-size: 114px;
+}
+
+.tourdate_location {
+  width: 400px;
+  font-size: 62px;
+}
+
+.tourdate_box {
+  width: 203px;
+  height: 268px;
+  font-size: 52px;
+}
+
+.tourdate_location span {
+  font-family: 'eccentricregular';
+  font-size: 60px;
+  line-height: 40px;
 }
 
 
@@ -518,6 +624,157 @@ nav ul {
 
 
 @media screen and (max-width: 320px){
+
+  .hamburger{
+    font-size:30px;
+    cursor:pointer;
+    color: #fff;
+    position: relative;
+    display: inline;
+    left: -25px;
+  }
+
+  .index_nav ul{
+    display: none;
+  }
+
+  #gavlink{
+    display: inline;
+  }
+
+  br {
+    display: none;
+}
+
+nav{
+  height: 60px;
+}
+
+#gavinmobile{
+  display: inline;
+  font-size: 26px;
+  color: #ffffff;
+  font-family: 'eccentricregular';
+  font-weight: normal;
+  font-size: 35px;
+  position: relative;
+  left: -5px;
+}
+
+  .home_hero h1, .child_hero h1 {
+    font-weight: normal;
+    font-size: 55px;
+    line-height: 80px;
+    margin: 8px;
+}
+
+.home_hero p, .child_hero p {
+  font-family: 'Courier Prime', monospace;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 35px;
+  color: #ffffff;
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-right: 8px;
+}
+
+.diamonds {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0px;
+  position: relative;
+  top: 10%;
+  left: -30px;
+}
+
+#navbar ul{
+  display: none;
+}
+
+.child_hero{
+  display: none;
+}
+
+.about_hero {
+  width: 100vw;
+  height: 175px;
+  background-size: cover;
+  margin-top: 60px;
+}
+
+.content{
+  padding: 0px;
+  height: auto;
+}
+
+.aboutpage h4 {
+  right: 22%;
+}
+
+.aboutpage h4 {
+  margin: 20px 0px 0px 70px;
+}
+
+.aboutpage p {
+  font-size: 15px;
+  line-height: 22px;
+  width: 298px;
+}
+
+.tourpage {
+  background-color: #FBB44E;
+  width: 100vw;
+  height: 2800px;
+  padding: 0;
+}
+
+.tour_hero h3 {
+  font-size: 44px;
+  padding: 59px 0px 5px 0px;
+}
+
+.tourdate_box {
+  width: 70px;
+  height: 106px;
+  border: 6px solid #36333e;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 71px 0;
+  font-family: 'eccentricregular';
+  font-size: 22px;
+  color: #36333e;
+  text-align: center;
+  padding: 6px;
+}
+
+.tourdate_location {
+  width: 160px;
+  height: 80px;
+  background-color: #36333e;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 25px 30px 25px 30px;
+  font-family: 'osgardregular';
+  font-size: 24px;
+}
+
+.tourdate_box span {
+  font-family: 'osgardregular';
+  font-size: 70px;
+  line-height: 65px;
+}
+
+.tourdate_location span {
+  font-family: 'eccentricregular';
+  font-size: 20px;
+  line-height: 20px;
+}
+
+
 
 
 }

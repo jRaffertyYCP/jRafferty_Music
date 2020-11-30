@@ -1,4 +1,4 @@
-       <!doctype html>
+<!doctype html>
 <html class="no-js" lang="">
 
 <head>
@@ -16,11 +16,19 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="shop.html">Shop</a>
+  <a href="tour.html">Tour</a>
+</div>
+
 <body>
 
 <div class="childpage_order">
 
-<section class="child_hero">
+<section class="child_hero" id="aboutpagehideme">
 
   <div id="a">
   <div class="left_align">
@@ -156,6 +164,8 @@
 </section>
 
 <nav id="navbar">
+  <span class="hamburger" onclick="openNav()">&#9776;</span>
+  <p id="gavinmobile">Dance Gavin Dance</p>
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>

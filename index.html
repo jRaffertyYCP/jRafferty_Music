@@ -18,8 +18,18 @@
 
 <body class="home_order">
 
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="shop.html">Shop</a>
+    <a href="tour.html">Tour</a>
+  </div>
+
 
 <nav class="index_nav">
+  <span class="hamburger" onclick="openNav()">&#9776;</span>
+  <p id="gavinmobile">Dance Gavin Dance</p>
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
@@ -166,6 +176,7 @@
 
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/main.js"></script>
   <script>
   var currentDiv = $("#a");
   var nextDiv, count = 1;
