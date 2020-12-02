@@ -1196,7 +1196,17 @@ nav{
   left: -10px;
 }
 
-.cart {
+.mcart{
+  background-image: url('../svg/cart.svg');
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 4;
+  top: 7px;
+}
+
+.mcart {
   width: 40px;
   height: 40px;
   position: absolute;
@@ -1204,7 +1214,7 @@ nav{
   top: 14px;
 }
 
-.cart .cartcounter {
+.mcart .mcartcounter {
   width: 15px;
   height: 15px;
   font-size: 12px;
@@ -1213,7 +1223,7 @@ nav{
   margin: 0 0 0 23px;
 }
 
-.cart .cartcounter a {
+.mcart .mcartcounter a {
   color: #36333e;
   position: relative;
   justify-content: center;
