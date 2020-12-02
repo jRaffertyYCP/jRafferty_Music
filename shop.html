@@ -165,7 +165,26 @@
 
 <nav id="navbar">
   <span class="hamburger" onclick="openNav()">&#9776;</span>
-  <p id="gavinmobile">Dance Gavin Dance</p>
+  <p id="gavinmobile" class="pushme">Dance Gavin Dance</p>
+  <li id="navcart" class="showhidecart">
+
+    <div class="cart">
+
+      <script type="text/javascript">
+        var clicks = 0;
+        function onClick() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+        };
+      </script>
+
+      <div class="cartcounter">
+          <a id="clicks">0</a>
+      </div>
+
+    </div>
+
+  </li>
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>

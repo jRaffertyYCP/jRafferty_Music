@@ -552,6 +552,10 @@ nav.index_nav ul li a:hover {
   transition: ease-out 0.2s;
 }
 
+.showhidecart{
+  display: none;
+}
+
 /* cart icon */
 .cart{
   background-image: url('../svg/cart.svg');
@@ -1183,6 +1187,43 @@ nav{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.showhidecart {
+  display: inline;
+  position: relative;
+  top: -36px;
+  left: -10px;
+}
+
+.cart {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  z-index: 4;
+  top: 14px;
+}
+
+.cart .cartcounter {
+  width: 15px;
+  height: 15px;
+  font-size: 12px;
+  background-color: #fbb44e;
+  border-radius: 15px;
+  margin: 0 0 0 23px;
+}
+
+.cart .cartcounter a {
+  color: #36333e;
+  position: relative;
+  justify-content: center;
+  left: 5px;
+  bottom: 0px;
+}
+
+p#gavinmobile.pushme{
+  position: relative;
+  left: -10px;
 }
 
 /* The container */
